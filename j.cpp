@@ -1,17 +1,19 @@
-//苹果每个 0.8 元，第一天买 2 个，第二天开始，每天买前天的 2 倍，直到购买的苹果数不超过100的最大值，求每天平均花多少钱
-#include<iostream>
-using namespace std;
+#include<stdio.h>
 int main()
 {
-	int num, sum, d;
-	d = 0;
-	sum = 0;
-	for (int i = 2; i <= 100; i *= 2)
+	char c;
+	int y = 0, s = 0, k = 0, z = 0;
+	printf("请输入一串字符：");
+	while ((c = getchar()) != '\n')
 	{
-		num = i;
-		sum = sum + num;
-		d++;
+		if (c <= 'z' && c >= 'a' || c <= 'Z' && c >= 'z')
+			y++;
+		else if (c <= '9' && c >= '0')
+			s++;
+		else if (c == ' ')
+			k++;
+		else
+			z++;
 	}
-	cout << 0.8 * sum / d << endl;
-	return 0;
+	printf("英文字母有%d个，数字有%d个，空格有%d个，其他字符有%d个", y, s, k, z);
 }

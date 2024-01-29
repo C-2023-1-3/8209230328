@@ -1,18 +1,20 @@
-//入一行字符，分别统计出其中英文字母、空格、数字字符和其它字符的个数。
-#include<iostream>
+#include <iostream>
 using namespace std;
 int main()
 {
-	char c;
-	int english = 0, num = 0, space = 0, other = 0;
-	while ((c = getchar()) != '\n')
+	char a[20];
+	int i = 0;
+	cout << "please input a character:\n";
+	cin >> a;
+	if (a[i] >= 'a' && a[i] <= 'z')
 	{
-		if (c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z') { english++; }
-		else if (c == ' ') { space++; }
-		else if (c >= '0' && c <= '9') { num++; }
-		else  other++;
+		a[i] -= 32;
+		cout << a[i] << endl;
 	}
-	cout << "英文字母：" << english << "\n空格：" << space << "\n数字字符：" << num << "\n其他字符："
-		<< other << endl;
+	else if (a[i] >= 'A' && a[i] <= 'Z')
+	{
+		a[i] += 1;
+		cout << static_cast<int>(a[i]) << endl;
+	}
 	return 0;
 }

@@ -1,22 +1,12 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 int main()
 {
-	int a, b, c, s;
-	cin >> a >> b >> c;
-	if (a + b > c && a + c > b && b + c > a);
-	
-	{
-		s = a + b + c;
-		cout << s << endl;
-		if (a == b || b == c || a == c)
-			cout << "This is an isosceles triangle" << endl;
+    unsigned int testUnint = 65535;//0xffff
+    cout << "output in char type:" << static_cast<char>(testUnint) << endl;
+    cout << "output in short type:" << static_cast<short>(testUnint) << endl;
+    cout << "output in int type:" << static_cast<int> (testUnint) << endl;
+    cout << "output in double type:" << static_cast<double>(testUnint) << endl;
 
-		else
-			cout << "This is not an isosceles triangle " << endl;
-	}
-
-	cout << "This is not a triangle" << endl;
-		
-	return 0;
+    return 0;
 }

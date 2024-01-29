@@ -1,23 +1,15 @@
 #include<iostream>
-
 using namespace std;
-
 int main()
-
 {
-
-    double x, y;
-
-    cin >> x;
-
-    if (x > 0 && x < 1) { y = 3 - 2 * x; }
-
-    if (x >= 1 && x < 5) { y = 1 / (2 * x) + 1; }
-
-    if (x >= 5 && x < 10) { y = x * x; }
-
-    cout << y << endl;
+    cout << "   char      length ; " << sizeof(char) << endl;
+    cout << "   int       length ; " << sizeof(int) << endl;
+    cout << "   short     length ; " << sizeof(short) << endl;
+    cout << "   long      length ; " << sizeof(long) << endl;
+    cout << "   double    length ; " << sizeof(double) << endl;
+    cout << "   float     length ; " << sizeof(float) << endl;
+    cout << " long double length ; " << sizeof(long double) << endl;
+    cout << "   wchar_t   length ; " << sizeof(wchar_t) << endl;
 
     return 0;
-
 }
